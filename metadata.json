@@ -1,0 +1,6 @@
+{
+  "name": "ALAIA SKIN STUDIO · Luxury Beauty & Skincare",
+  "description": "Centro boutique de spa, estética y cuidado de la piel en PH Twist Tower, Obarrio, Ciudad de Panamá. Rituales faciales, peeling, cosmetología y bienestar corporal.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}

@@ -1,0 +1,253 @@
+import { Treatment, StudioConfig, GalleryItem, FaqItem, Booking } from '../types';
+
+export const INITIAL_STUDIO_CONFIG: StudioConfig = {
+  studioName: 'ALAIA SKIN STUDIO',
+  tagline: 'Luxury Beauty & Skincare',
+  phone: '63022267',
+  whatsappNumber: '50763022267',
+  address: 'PH Twist Tower, Obarrio, Ciudad de Panamá, Panamá',
+  googleMapsUrl: 'https://maps.google.com/?q=Twist+Tower+Obarrio+Panama',
+  instagramUrl: 'https://www.instagram.com/alaia.skinstudio/',
+  instagramHandle: '@alaia.skinstudio',
+  heroHeadline: 'Tu piel merece un cuidado extraordinario.',
+  heroSubtitle: 'Descubre una experiencia de bienestar y cuidado personalizado con tratamientos diseñados para acompañar tu rutina de belleza.',
+  aboutTitle: 'Un espacio dedicado a ti',
+  aboutText: 'En ALAIA SKIN STUDIO, cada experiencia está pensada para dedicarte un momento de cuidado, bienestar y atención personalizada. Descubre nuestros servicios y encuentra el tratamiento que mejor se adapte a tus necesidades.',
+  schedules: [
+    { day: 'Lunes', isOpen: true, hours: 'Previa Cita' },
+    { day: 'Martes', isOpen: true, hours: 'Previa Cita' },
+    { day: 'Miércoles', isOpen: true, hours: 'Previa Cita' },
+    { day: 'Jueves', isOpen: true, hours: 'Previa Cita' },
+    { day: 'Viernes', isOpen: true, hours: 'Previa Cita' },
+    { day: 'Sábado', isOpen: true, hours: 'Previa Cita' },
+    { day: 'Domingo', isOpen: true, hours: 'Previa Cita' },
+  ],
+};
+
+export const INITIAL_TREATMENTS: Treatment[] = [
+  {
+    id: 'faciales',
+    name: 'Tratamientos Faciales & Glow',
+    category: 'faciales',
+    shortDescription: 'Ritual integral enfocado en la limpieza profunda, oxigenación y revitalización natural de la piel.',
+    fullDescription: 'Experiencia facial diseñada para restaurar el equilibrio dérmico, mejorar la textura y devolver la luminosidad natural del rostro. Se adapta minuciosamente a la condición actual de tu piel, utilizando técnicas manuales y activos hidratantes de alta calidad.',
+    duration: '60 - 75 min',
+    price: '',
+    showPrice: false,
+    image: 'https://images.unsplash.com/photo-1570172619644-dfd03ed5d881?auto=format&fit=crop&w=1200&q=80',
+    benefits: [
+      'Higiene dérmica no invasiva y descongestión de poros',
+      'Aporte intensivo de hidratación y nutrientes botánicos',
+      'Luminosidad inmediata y efecto descansado en el rostro',
+      'Protocolo personalizado según tu biotipo dérmico'
+    ],
+    recommendations: 'Acudir preferiblemente sin maquillaje pesado. Evitar exfoliantes mecánicos agresivos 48 horas antes de la sesión.',
+    isConfirmedByOwner: false,
+  },
+  {
+    id: 'peeling',
+    name: 'Peeling Facial Renovador',
+    category: 'peeling',
+    shortDescription: 'Exfoliación cutánea controlada para suavizar la textura y estimular la regeneración celular.',
+    fullDescription: 'Tratamiento de renovación cutánea que promueve la eliminación delicada de células desvitalizadas. Ayuda a unificar el tono superficial, afinar la textura de la piel y devolver una sensación de suavidad y frescura.',
+    duration: '50 - 60 min',
+    price: '',
+    showPrice: false,
+    image: 'https://images.unsplash.com/photo-1512290900672-1f02e6a0d24e?auto=format&fit=crop&w=1200&q=80',
+    benefits: [
+      'Promueve la renovación del estrato córneo de forma controlada',
+      'Favorece la luminosidad y un aspecto más homogéneo',
+      'Aumenta la receptividad a los sueros e hidratantes diarios',
+      'Sensación de cutis sedoso y revitalizado'
+    ],
+    recommendations: 'Indispensable el uso estricto de protector solar de amplio espectro tras la sesión y evitar exposición solar directa.',
+    isConfirmedByOwner: false,
+  },
+  {
+    id: 'skincare',
+    name: 'Skin Care & Nutrición Dérmica',
+    category: 'faciales',
+    shortDescription: 'Asesoría y aplicación de activos protectores para fortalecer la barrera cutánea.',
+    fullDescription: 'Sesión enfocada en nutrir en profundidad y reconfortar pieles que necesitan un extra de hidratación, balance o protección. Combinamos sueros botánicos y mascarillas calmantes para una barrera cutánea sana y radiante.',
+    duration: '60 min',
+    price: '',
+    showPrice: false,
+    image: 'https://images.unsplash.com/photo-1522337360788-8b13dee7a37e?auto=format&fit=crop&w=1200&q=80',
+    benefits: [
+      'Fortalecimiento de la barrera hidrolipídica natural',
+      'Tratamiento de hidratación intensiva con efecto plump',
+      'Orientación para tu rutina diaria de cuidado en casa',
+      'Alivio de la tirantez y el enrojecimiento superficial'
+    ],
+    recommendations: 'Ideal para preparar la piel antes de un evento importante o como mantenimiento mensual.',
+    isConfirmedByOwner: false,
+  },
+  {
+    id: 'cosmetologia',
+    name: 'Cosmetología & Cosmiatría Especializada',
+    category: 'cosmetologia',
+    shortDescription: 'Atención estética avanzada con enfoque integral para el bienestar y la armonía facial.',
+    fullDescription: 'Servicios cosmiátricos personalizados adaptados a las necesidades específicas de cada cutis. Cada protocolo es evaluado previamente para recomendar la mejor combinación de activos y técnicas estéticas no invasivas.',
+    duration: '60 - 90 min',
+    price: '',
+    showPrice: false,
+    image: 'https://images.unsplash.com/photo-1519699047748-de8e457a634e?auto=format&fit=crop&w=1200&q=80',
+    benefits: [
+      'Evaluación estética personalizada por personal capacitado',
+      'Atención a condiciones específicas del cutis',
+      'Integración de técnicas cosmetológicas de vanguardia',
+      'Seguimiento cuidadoso de la evolución de tu piel'
+    ],
+    recommendations: 'Informar al inicio de la sesión sobre cualquier sensibilidad cutánea, embarazo o medicación tópica actual.',
+    isConfirmedByOwner: false,
+  },
+  {
+    id: 'maderoterapia',
+    name: 'Maderoterapia Corporal & Drenaje',
+    category: 'maderoterapia',
+    shortDescription: 'Técnica holística con elementos de madera noble diseñada para relajar, tonificar y activar la circulación.',
+    fullDescription: 'Ritual corporal milenario que emplea instrumentos anatómicos de madera pulida para masajear zonas específicas del cuerpo. Ayuda a activar la microcirculación, favorecer el drenaje de líquidos y brindar una sensación profunda de descanso y ligereza.',
+    duration: '50 - 60 min',
+    price: '',
+    showPrice: false,
+    image: 'https://images.unsplash.com/photo-1544161515-4ab6ce6db874?auto=format&fit=crop&w=1200&q=80',
+    benefits: [
+      'Estimulación suave del sistema circulatorio y linfático',
+      'Sensación de alivio y descongestión en piernas y abdomen',
+      'Aportación a la tonicidad cutánea y descanso muscular',
+      'Experiencia de relajación y bienestar corporal completo'
+    ],
+    recommendations: 'Mantener una adecuada hidratación con agua antes y después del masaje para apoyar el proceso natural del organismo.',
+    isConfirmedByOwner: false,
+  },
+  {
+    id: 'masajes-reductores',
+    name: 'Masajes Reductores & Moldeadores',
+    category: 'masajes',
+    shortDescription: 'Maniobras especializadas dirigidas a acompañar tus hábitos saludables y estilizar la figura.',
+    fullDescription: 'Masaje corporal con maniobras precisas y rítmicas enfocadas en movilizar tejido y dinamizar la circulación en áreas específicas como cintura, abdomen y piernas. Un complemento ideal para quienes cuidan su alimentación y realizan actividad física.',
+    duration: '45 - 60 min',
+    price: '',
+    showPrice: false,
+    image: 'https://images.unsplash.com/photo-1600334129128-685c5582fd35?auto=format&fit=crop&w=1200&q=80',
+    benefits: [
+      'Técnicas manuales vigorosas que activan la circulación local',
+      'Acompañamiento a tu rutina de ejercicio y bienestar',
+      'Mejora de la sensación de pesadez y retención de líquidos',
+      'Atención localizada en las zonas que desees trabajar'
+    ],
+    recommendations: 'Se recomienda no ingerir comidas pesadas inmediatamente antes de la sesión.',
+    isConfirmedByOwner: false,
+  },
+];
+
+export const INITIAL_GALLERY: GalleryItem[] = [
+  {
+    id: 'g1',
+    title: 'Cabinas de Tratamiento',
+    category: 'cabinas',
+    imageUrl: 'https://images.unsplash.com/photo-1540555700478-4be289fbecef?auto=format&fit=crop&w=1000&q=80',
+    caption: 'Espacios creados para desconectar del ruido de la ciudad y conectar con tu bienestar.',
+  },
+  {
+    id: 'g2',
+    title: 'Cuidado Facial Personalizado',
+    category: 'rituales',
+    imageUrl: 'https://images.unsplash.com/photo-1570172619644-dfd03ed5d881?auto=format&fit=crop&w=1000&q=80',
+    caption: 'Texturas sedosas y manos expertas dedicadas a realzar la frescura natural de tu cutis.',
+  },
+  {
+    id: 'g3',
+    title: 'Texturas & Activos Botánicos',
+    category: 'texturas',
+    imageUrl: 'https://images.unsplash.com/photo-1556228720-195a672e8a03?auto=format&fit=crop&w=1000&q=80',
+    caption: 'Selección de fórmulas respetuosas con la barrera cutánea y aromaterapia sutil.',
+  },
+  {
+    id: 'g4',
+    title: 'Maderoterapia & Bienestar Corporal',
+    category: 'bienestar',
+    imageUrl: 'https://images.unsplash.com/photo-1544161515-4ab6ce6db874?auto=format&fit=crop&w=1000&q=80',
+    caption: 'Instrumentos anatómicos de madera noble para revitalizar el cuerpo de forma natural.',
+  },
+  {
+    id: 'g5',
+    title: 'Detalles de Relajación',
+    category: 'cabinas',
+    imageUrl: 'https://images.unsplash.com/photo-1515377905703-c4788e51af15?auto=format&fit=crop&w=1000&q=80',
+    caption: 'Luz tenue, toallas de algodón puro y una atmósfera cálida pensada para ti.',
+  },
+  {
+    id: 'g6',
+    title: 'Rituales de Hidratación Profunda',
+    category: 'rituales',
+    imageUrl: 'https://images.unsplash.com/photo-1512290900672-1f02e6a0d24e?auto=format&fit=crop&w=1000&q=80',
+    caption: 'Protocolos diseñados para devolver la vitalidad y el brillo natural que tu piel merece.',
+  },
+];
+
+export const INITIAL_FAQS: FaqItem[] = [
+  {
+    id: 'f1',
+    question: '¿Cómo puedo reservar una cita en ALAIA SKIN STUDIO?',
+    answer: 'Puedes solicitar tu cita directamente a través del botón "Reservar mi cita" de esta página web seleccionando tu tratamiento y horario preferido, o enviándonos un mensaje directo por WhatsApp al 6302-2267. Nuestro equipo te confirmará la disponibilidad.',
+  },
+  {
+    id: 'f2',
+    question: '¿Qué tratamientos ofrecen actualmente?',
+    answer: 'Contamos con servicios de tratamientos faciales profundos, peeling renovador, rutinas de skin care personalizadas, cosmetología y cosmiatría especializada, maderoterapia corporal y masajes reductores orientados al bienestar.',
+  },
+  {
+    id: 'f3',
+    question: '¿Dónde se encuentra ubicado el estudio en Panamá?',
+    answer: 'Estamos ubicados en PH Twist Tower, en el corazón de Obarrio, Ciudad de Panamá. Al coordinar tu cita te compartiremos todos los detalles de acceso y estacionamiento para tu mayor comodidad.',
+  },
+  {
+    id: 'f4',
+    question: '¿Cómo puedo consultar los precios y paquetes?',
+    answer: 'Para consultar las tarifas actualizadas y posibles promociones de temporada, puedes pulsar el botón "Consultar tratamiento" en cualquiera de nuestros rituales o escribirnos directamente a nuestro WhatsApp oficial.',
+  },
+  {
+    id: 'f5',
+    question: '¿Qué debo tener en cuenta antes de mi tratamiento?',
+    answer: 'Recomendamos asistir puntual, con ropa cómoda y preferiblemente sin maquillaje cargado en caso de tratamientos faciales. Informa a la especialista sobre cualquier alergia, condición de piel o tratamiento previo.',
+  },
+  {
+    id: 'f6',
+    question: '¿Cómo puedo reprogramar o modificar mi reserva?',
+    answer: 'Si necesitas cambiar la fecha u hora de tu cita, te solicitamos avisarnos con al menos 24 horas de antelación vía WhatsApp al 6302-2267 para poder reasignar el espacio en cabina a otra clienta.',
+  },
+];
+
+export const INITIAL_DEMO_BOOKINGS: Booking[] = [
+  {
+    id: 'demo-b1',
+    code: 'ALAIA-9821',
+    treatmentId: 'faciales',
+    treatmentName: 'Tratamientos Faciales & Glow',
+    date: '2026-10-18',
+    timeSlot: '11:00 AM',
+    clientName: 'Valeria Méndez',
+    clientPhone: '+507 6890-1122',
+    clientEmail: 'valeria.m@example.com',
+    notes: 'Piel con tendencia seca, busco luminosidad para una boda el fin de semana.',
+    status: 'confirmada',
+    createdAt: '2026-10-15T14:20:00Z',
+    isDemo: true,
+  },
+  {
+    id: 'demo-b2',
+    code: 'ALAIA-9822',
+    treatmentId: 'maderoterapia',
+    treatmentName: 'Maderoterapia Corporal & Drenaje',
+    date: '2026-10-19',
+    timeSlot: '03:30 PM',
+    clientName: 'Sofía Carrizo',
+    clientPhone: '+507 6712-9900',
+    clientEmail: '',
+    notes: 'Primera sesión corporal.',
+    status: 'pendiente',
+    createdAt: '2026-10-16T09:15:00Z',
+    isDemo: true,
+  },
+];
